@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CVCS003", "CVCS003\CVCS003.csproj", "{E10F6BFB-8DA7-46AE-8190-AFB5BF2952E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeLapse", "CVCS003\TimeLapse.csproj", "{E10F6BFB-8DA7-46AE-8190-AFB5BF2952E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

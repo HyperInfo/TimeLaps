@@ -62,6 +62,8 @@ namespace CVCS003
             //  CreateCameraCaptureの引数はカメラのIndex(通常は0から始まる)
             using (var capture = Cv.CreateCameraCapture(0))
             {
+                Console.WriteLine("Hit any key to quit");
+
                 /*
                 double fps=12.0;
                 int interval=1;
@@ -121,7 +123,16 @@ namespace CVCS003
                 CvVideoWriter vw = new CvVideoWriter(OutputFile, codec, fps, size, true);
                 
 
-                CvFont font = new CvFont(FontFace.HersheyComplex, 0.7, 0.7);
+                //CvFont font = new CvFont(FontFace.HersheyTriplex, 0.7, 0.7);
+                //(FontFace.HersheyPlain, 1.0, 1.0, 0, 2);
+
+                double fontSize;
+                if(width>600)
+                     fontSize=1.0;
+                else
+                     fontSize=0.5;
+
+                CvFont font = new CvFont(FontFace.HersheyPlain,fontSize,fontSize);
 
                 //  何かキーを押すまでは、Webカメラの画像を表示し続ける
                 while (Cv.WaitKey(1) == -1)
@@ -134,7 +145,7 @@ namespace CVCS003
                     //  Window「Capture」を作って、Webカメラの画像を表示
                     if (frame != null)
                     {
-                        frame.PutText(str, new CvPoint(10, 20), font, new CvColor(255,0, 255));
+                        frame.PutText(str, new CvPoint(10, 20), font, new CvColor(200,100,50));
                         Cv.ShowImage("Timelapse", frame);
                         //frame.SaveImage("result.bmp");
                        //bitmap = BitmapConverter.ToBitmap(frame);
